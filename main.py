@@ -45,11 +45,13 @@ def recommend_app():
 
                 if recommendations:
                     st.write(f"Recomendações para {username}:")
-                    for recommendation in recommendations:
+                    cols = st.columns(3)  # Número de colunas, ajuste conforme necessário
+                    for i, recommendation in enumerate(recommendations):
                         movie_name = recommendation[0]
                         cover_url = covers_df[covers_df['Movie'] == movie_name]['Cover'].values[0]
-                        st.image(cover_url, caption=movie_name)
-                        st.write(f"Pontuação: {recommendation[1]}")
+                        with cols[i % 3]:  # Ajusta a coluna com base na posição
+                            st.image(cover_url, caption=movie_name, width=200)  # Define a largura
+                            st.write(f"Pontuação: {recommendation[1]}")
                 else:
                     st.write(f"Nenhuma recomendação disponível para {username}.")
 
