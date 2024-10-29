@@ -1,0 +1,9 @@
+# Arquivo config.toml para Streamlit
+
+[theme]
+base="dark"  # Tema escuro, para combinar com o fundo
+primaryColor="#FF6F61"  # Laranja suave para botões e seletores
+backgroundColor="#4A5568"  # Fundo azul acinzentado, como você escolheu
+secondaryBackgroundColor="#2D3748"  # Fundo secundário um pouco mais escuro
+textColor="#E2E8F0"  # Texto em cinza claro para contraste com o fundo escuro
+font="sans serif"  # Fonte sans-serif para um visual moderno
